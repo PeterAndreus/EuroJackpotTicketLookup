@@ -6,6 +6,7 @@ var weekDraw = function(){
 var yearDraw  = function(){
   this.weekDraws = [];
   this.year = "";
+  this.week = "";
 };
 
 var years = [2012, 2013, 2014, 2015];
@@ -13,9 +14,9 @@ var years = [2012, 2013, 2014, 2015];
 var fullDraw = [];
 
 function prepareFiles(){
-  for(var i = 0; i<years.length; i++){
-    readBallFile(years[i]+"b", years[i]+"e", years[i]);
-  }
+  years.forEach(function(year){
+    readBallFile(year+"b", year+"e", year);
+  })
 }
 
 function readBallFile(bFile, eFile, year)
@@ -49,11 +50,12 @@ function parseFile(bStr, eStr, year){
     
     var bStrWeekly = bStr.split("-");
     var eStrWeekly = eStr.split("-");
-    
+        
     for(var j = 0; j<bStrWeekly.length; j++){
       var tmp = new weekDraw();
       tmp.balls = bStrWeekly[j].split(":");
       tmp.euros = eStrWeekly[j].split(":");
+      tmp.week = j;
       yearTmp.weekDraws.push(tmp);
     }
     
