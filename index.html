@@ -1,5 +1,73 @@
 <html>
+<head>
+<meta charset="UTF-8">
+</head>
 <script src="main.js"></script>
+<style type="text/css">
+.ball, .euro{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  font-size: 40px;
+  text-align: center;
+  border-color: #ddcb0e;
+  background-color: #fffd36;
+}
+.euro{
+  background-color: #36a3ff;
+}
+body{
+    text-align: center;
+    background-color: rgb(246, 214, 105);
+}
+form{
+    padding-top: 200px;
+}
+.euros{
+    padding-left: 50px;	
+}
+.checkBtn{
+    width: 300px;
+    font-size: 40px;
+    margin-top: 30px;
+    background-color: orange;
+    border-radius: 25px;
+}
+table{
+  border-collapse: collapse;
+}
+tr{
+  border-style: solid;
+  border-width: 1px;
+}
+thead > tr > td{
+  background-color: orange;
+  font-weight: bold;
+}
+tr:nth-child(even) {background-color: #CCC}
+tr:nth-child(odd) {background-color: #FFF}
+td{
+  width: 100px;
+}
+.width200{
+  width: 200px;
+}
+</style>
 <body>
+<form id="euroJackpot">
+  <span class="balls">
+    <input class="ball" type="number" name="ball1" min="1" max="50">
+    <input class="ball" type="number" name="ball2" min="1" max="50">
+    <input class="ball" type="number" name="ball3" min="1" max="50">
+    <input class="ball" type="number" name="ball4" min="1" max="50">
+    <input class="ball" type="number" name="ball5" min="1" max="50">
+  </span>
+  <span class="euros">
+    <input class="euro" type="number" name="euro1" min="1" max="10">
+    <input class="euro" type="number" name="euro2" min="1" max="10">
+  </span>
+  <br>
+  <button class="checkBtn" type="button" onclick="prepareCheck()">Check</button>
+</form>
 </body>
 </html>
