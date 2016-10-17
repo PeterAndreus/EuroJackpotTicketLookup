@@ -16,7 +16,7 @@ var price = function(){
   this.priceValue = "";
 }
 
-var years = [2012, 2013, 2014, 2015];
+var years = [2012, 2013, 2014, 2015, 2016];
 
 var fullDraw = [];
 
