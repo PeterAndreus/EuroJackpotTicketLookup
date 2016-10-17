@@ -58,15 +58,15 @@ td{
 <body>
 <form id="euroJackpot">
   <span class="balls">
-    <input class="ball" type="number" name="ball1" min="1" max="50">
-    <input class="ball" type="number" name="ball2" min="1" max="50">
-    <input class="ball" type="number" name="ball3" min="1" max="50">
-    <input class="ball" type="number" name="ball4" min="1" max="50">
-    <input class="ball" type="number" name="ball5" min="1" max="50">
+    <input class="ball" type="text" pattern="\d*" name="ball1" min="1" max="50" maxlength="2">
+    <input class="ball" type="text" pattern="\d*" name="ball2" min="1" max="50" maxlength="2">
+    <input class="ball" type="text" pattern="\d*" name="ball3" min="1" max="50" maxlength="2">
+    <input class="ball" type="text" pattern="\d*" name="ball4" min="1" max="50" maxlength="2">
+    <input class="ball" type="text" pattern="\d*" name="ball5" min="1" max="50" maxlength="2">
   </span>
   <span class="euros">
-    <input class="euro" type="number" name="euro1" min="1" max="10">
-    <input class="euro" type="number" name="euro2" min="1" max="10">
+    <input class="euro" type="text" pattern="\d*" name="euro1" min="1" max="10" maxlength="2">
+    <input class="euro" type="text" pattern="\d*" name="euro2" min="1" max="10" maxlength="2">
   </span>
   <br>
   <button class="checkBtn" type="button" onclick="prepareCheck()">Check</button>

@@ -26,7 +26,7 @@ function prepareCheck(){
   
   for(var i=1; i<=5; i++){
     var tmpVal = document.getElementsByName("ball"+i)[0].value;
-    if(tmpVal && tip.balls.indexOf(tmpVal) == -1){
+    if(tmpVal && tip.balls.indexOf(tmpVal) == -1 && tmpVal<=50 && tmpVal>0){
       tip.balls.push(tmpVal);
     }else{
       valid = false;
@@ -37,13 +37,16 @@ function prepareCheck(){
   
   for(var i=1; i<=2; i++){
     var tmpVal = document.getElementsByName("euro"+i)[0].value;
-    if(tmpVal && tip.euros.indexOf(tmpVal) == -1){
+    if(tmpVal && tip.euros.indexOf(tmpVal) == -1 && tmpVal<=10 && tmpVal>0){
       tip.euros.push(tmpVal);
     }else{
       valid = false;
     }
   }
   if(valid){
+    if(document.getElementsByTagName("table")[0]){
+	  document.getElementsByTagName("table")[0].remove();
+    }
     prepareFiles();
     var priceList = checkNumbers(tip);price.priceCategory
     createPriceTable(priceList);
